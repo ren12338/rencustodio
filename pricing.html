@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pricing Page</title>
+    <style type="text/css">
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            min-height: 100vh;
+            background-color: #07294f;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #1d272d;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 19px;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f0a500;
+        }
+
+        /* Content Styles */
+        section#pricing {
+            padding: 40px 20px;
+            margin: 80px auto 20px;
+            max-width: 1000px;
+            background-image: url('./pictures/pricing.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            border: 5px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section#pricing h2 {
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section#pricing p {
+            color: #fff;
+            font-size: 19px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul li {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        /* Pricing Plan Styles */
+        .pricing-plan {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .plan {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+        }
+
+        .plan h3 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .plan p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .plan .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2d9cdb;
+            margin: 10px 0;
+        }
+
+        .plan button {
+            background-color: #5f7cb7;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 19px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan button:hover {
+            background-color: #2abada;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="my website.html">Home</a>
+    </nav>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2>Choose a Plan That Suits Your Needs</h2>
+        <p>Our plans are designed for businesses of all sizes. Pick the one that fits your needs and start today!</p>
+
+        <!-- Pricing List -->
+        <div class="pricing-plan">
+            <div class="plan">
+                <h3>Free Trial</h3>
+                <p>Get started with our basic features for free! No credit card required.</p>
+                <div class="price">₱0/month</div>
+                <button>Start Free Trial</button>
+            </div>
+
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>Access essential features to monitor your transactions and get started quickly.</p>
+                <div class="price">₱1,000/month</div>
+                <button>Choose Basic Plan</button>
+            </div>
+
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>Unlock advanced features and analytics for full payment monitoring and support.</p>
+                <div class="price">₱2,500/month</div>
+                <button>Get Premium</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

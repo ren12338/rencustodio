@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Monitor Pro</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            background-image: url("./pictures/slide.png");
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            font-size: 1.8;
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 19.2px;
+        }
+
+        /* Hover effect for sidebar links */
+        .sidebar a:hover {
+            padding-left: 15px;
+            transition: all 0.3s ease;
+        }
+
+        /* Content styles */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url("./pictures/upp.png");
+            color: white;
+            padding: 20px;
+            margin-left: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+
+        .logo img {
+            height: 50px; /* Set the height of the logo */
+            width: auto;  /* Automatically adjust the width to maintain aspect ratio */
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            font-size: 15px;
+            border: -1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 10px;
+            background: #612e78;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .search-container button:hover {
+            background: #0c436a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 19.2px;
+        }
+
+        .hero {
+            background-image: url("./pictures/aa.png");
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #5f7cb7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Hover effect for CTA button */
+        .cta:hover {
+            background: #2abada;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 10px;
+            border: 5px solid #ccc;
+            background-image: url("./pictures/ng.png");
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            width: 200px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 29px;
+            text-decoration: none;
+            width: 100px;
+        }
+
+        .social-icons a:hover {
+            color: #5f7cb7;
+        }
+
+       
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        
+         .ytmaps {
+            margin-top: 10px;
+            font-style: italic;
+            display: inline-flex;
+            background-image: url("./pictures/ng.png");
+            border-radius: 10px;
+            border: 5px solid #ccc;
+            width: 94%;
+            padding: 10px;
+            margin: 20px;
+        
+        #yt {
+            width: 100px;
+            height: 50px;
+        }
+        iframe {
+            padding: 20px;
+        }
+
+    </style>
+    <!-- for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Payment Monitor</h2>
+        <ul>
+            <li><a href="Features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#log out.html">Log out</a></li>
+            <li><a href="index.html">Sign up</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <header>
+            <!-- Logo section -->
+            <div class="logo">
+                <img src="./pictures/logo.png" alt="PMS"> <!-- Your logo file here -->
+            </div>
+            <h1>Payment Monitoring System</h1>
+            <!-- Search bar container -->
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="searchBar">
+                <button type="submit">Search</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>Keep Your Business Safe</h2>
+            <p>Advanced payment monitoring system to detect fraud in real-time and gain insights into your transactions.</p>
+            <a class="cta" href="#features">Get Started</a>
+        </section>
+
+        
+
+        <section id="gallery">
+            <h2>Options Gallery</h2>
+            <div class="gallery">
+                <img src="./pictures/ss.png" alt="Image 1">
+                <img src="./pictures/img.png" alt="Image 2">
+                <img src="./pictures/gg.png" alt="Image 3">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best payment monitoring solutions for businesses worldwide. We also specialize in offering comprehensive payment monitoring services that track financial transactions across various platforms, gateways, and systems. Whether you are a small business or a large enterprise, we help ensure that every transaction is processed accurately and securely.</p>
+            <p>Our services include:</p>
+            <ul>
+                <li>Real-time transaction tracking</li>
+                <li>Secure payment processing</li>
+                <li>Automated alerts & reports</li>
+                <li>Security & Compliance</li>
+            </ul>
+
+        </section>
+
+        <div class="ytmaps">
+            <div class="yt">
+               <iframe width="450" height="300" style="border:0" src="https://www.youtube.com/embed/ghehypv4nYE?si=GqgJTcxTaSa_LfZY"> 
+                </iframe> 
+                </iframe> 
+            </div>
+            <div class="map1">
+                <div class="map">
+                    <iframe id="map1" width="450" height="300" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1329054.4660604047!2d6.904998670039969!3d46.80560924548641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64ef6f596d61%3A0x5c56b5110fcb7b15!2sSwitzerland!5e1!3m2!1sen!2sph!4v1732845781659!5m2!1sen!2sph"></iframe>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1>Contact with us</h1>
+            <p>If you would like to learn more about the Payment Monitoring System, get a demo, or inquire about pricing, don’t hesitate to contact us through the links on our social media pages or via our website.</p>
+          <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
+                <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+                <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://youtube.com" target="_blank"class="fab fa-youtube"></a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

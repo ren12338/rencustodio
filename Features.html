@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Features Page</title>
+    <style type="text/css">
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #07294f;
+            color: #333;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #333;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f0a500;
+        }
+
+        /* Main Content Section */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Features Section Styling */
+        section#features {
+            padding: 40px 20px;
+            background-image: url("./pictures/features.png");
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 80px; /* Space for fixed navbar */
+
+
+        }
+
+        section#features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        section#features p {
+            text-align: center;
+            font-size: 19px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        /* Feature List Styling */
+        ul.feature-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            color: black;
+        }
+
+        ul.feature-list li {
+            background-image: url("./pictures/f3.png");
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        ul.feature-list li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        ul.feature-list li h3 {
+            font-size: 29px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        ul.feature-list li p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 16px;
+            }
+
+            section#features h2 {
+                font-size: 32px;
+            }
+
+            ul.feature-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            ul.feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="my website.html">Home</a>
+    </nav>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Key Features</h2>
+        <p>Discover the powerful features that make our service the best choice for your needs.</p>
+
+        <ul class="feature-list">
+            <li>
+                <h3>Real-Time Tracking</h3>
+                <p>Stay up-to-date with live tracking of your transactions, ensuring you never miss a detail.</p>
+            </li>
+            <li>
+                <h3>Advanced Fraud Detection</h3>
+                <p>Our system automatically detects and flags suspicious activity, keeping your business safe.</p>
+            </li>
+            <li>
+                <h3>Comprehensive Analytics</h3>
+                <p>Gain valuable insights into your transactions with detailed analytics and reporting features.</p>
+            </li>
+            <li>
+                <h3>Custom Alerts</h3>
+                <p>Set up custom alerts for transactions or changes that matter most to you and your team.</p>
+            </li>
+            <li>
+                <h3>Seamless Integration</h3>
+                <p>Integrate effortlessly with your existing payment platforms for a smooth experience.</p>
+            </li>
+            <li>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available around the clock to assist you with any issues or queries.</p>
+            </li>
+        </ul>
+    </section>
+
+</body>
+</html>

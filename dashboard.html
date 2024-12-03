@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Monitoring Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #2d2b1d;
+      padding: 20px 0px;
+      text-align: left;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #1e2a3f;
+      border-radius: 5px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #2d3b5f;
+    }
+
+    /* Header */
+    header {
+      background-color: #0c3d5a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    /* Dashboard Content */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+      background-image: url("./pictures/22.png");
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 280px;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #2d3b5f;
+    }
+
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .footer {
+      background-color: #31cab0;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .card .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2d3b5f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1e2a3f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="my website.html">Home</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Payment Monitoring Dashboard</h1>
+  </header>
+
+
+  <!-- Dashboard Content -->
+  <div class="container">
+    <!-- Total Payments Card -->
+    <div class="card" id="totalPaymentsCard">
+      <div class="icon">&#128179;</div>
+      <h3>Total Payments</h3>
+      <p id="totalPayments">₱45,000</p>
+    </div>
+
+    <!-- Pending Payments Card -->
+    <div class="card" id="pendingPaymentsCard">
+      <div class="icon">&#128214;</div>
+      <h3>Pending Payments</h3>
+      <p id="pendingPayments">₱5,000</p>
+    </div>
+
+    <!-- Payments Failed Card -->
+    <div class="card" id="failedPaymentsCard">
+      <div class="icon">&#10060;</div>
+      <h3>Payments Failed</h3>
+      <p id="failedPayments">₱200</p>
+    </div>
+
+    <!-- Payment Methods Card -->
+    <div class="card" id="paymentMethodsCard">
+      <div class="icon">&#128176;</div>
+      <h3>Payment Methods</h3>
+      <p id="paymentMethods">Credit Card, PayPal, Bank Transfer</p>
+    </div>
+  </div>
+
+  <!-- Input Section -->
+  <div class="input-container">
+    <h3>Update Payment Data</h3>
+    <input type="number" id="inputTotalPayments" placeholder="Enter Total Payments (₱)" />
+    <input type="number" id="inputPendingPayments" placeholder="Enter Pending Payments (₱)" />
+    <input type="number" id="inputFailedPayments" placeholder="Enter Failed Payments (₱)" />
+    <input type="text" id="inputPaymentMethods" placeholder="Enter Payment Methods" />
+    <br />
+    <button onclick="updateDashboard()">Update Dashboard</button>
+  </div>
+
+  <!-- JavaScript for Dynamic Updates -->
+  <script>
+    // Function to update the dashboard with new values from input fields
+    function updateDashboard() {
+      const totalPayments = document.getElementById('inputTotalPayments').value;
+      const pendingPayments = document.getElementById('inputPendingPayments').value;
+      const failedPayments = document.getElementById('inputFailedPayments').value;
+      const paymentMethods = document.getElementById('inputPaymentMethods').value;
+
+      // Update the displayed values if input is valid
+  </script>
+
+</body>
+</html>
